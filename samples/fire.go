@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/YaroslavGaponov/gofire"
+	".."
 	"time"
 )
 

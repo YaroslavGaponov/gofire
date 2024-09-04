@@ -13,19 +13,17 @@ type Fire struct {
 	screen [][]int
 }
 
-func NewFire(width, height int) *Fire {
+func NewFire(width, height int) Fire {
 
 	screen := make([][]int, height)
 	for i := 0; i < height; i++ {
 		screen[i] = make([]int, width)
 	}
 
-	fire := Fire{
+	return Fire{
 		term:   &Term{Width: width, Height: height},
 		screen: screen,
 	}
-
-	return &fire
 }
 
 func (fire *Fire) Draw() {

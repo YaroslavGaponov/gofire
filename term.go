@@ -11,13 +11,12 @@ type Term struct {
 	buffer []string
 }
 
-func NewTerm(width, height int) *Term {
-	term := Term{
+func NewTerm(width, height int) Term {
+	return Term{
 		Width:  width,
 		Height: height,
 		buffer: []string{},
 	}
-	return &term
 }
 
 func (term *Term) Cursor(visible bool) string {
